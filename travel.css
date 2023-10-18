@@ -1,0 +1,870 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+body{
+    background-color:white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body .wrapper {
+    background-color: white;
+    width: 98%;
+    margin: auto;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    /*overflow: hidden;*/
+}
+
+nav{
+    width: 100%;
+    min-height: 40px;
+    padding: 5px;
+    background-color: white;
+    position: fixed;
+      /*Check why the header pic got cut because of the position fixed */
+    z-index: 4444444444;
+}
+
+nav .navbar .logo li{
+    list-style-type: none;
+    float: left;
+    vertical-align: middle;
+}
+
+nav .navbar .logo img{
+    width: 70px;
+    height: auto;
+}
+
+nav .navbar #menu{
+    display: none;
+    float: right;
+    list-style-type: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+nav .navbar .center{
+    display: block;
+}
+
+nav a{
+    text-decoration: none;
+    color: #1C4961;
+}
+
+
+nav .navbar .row li{
+    list-style-type: none;
+    padding-left: 30px;
+    padding-top: 5px;
+    display: inline-block;
+}
+
+nav .navbar .row .current{
+    font-weight: bold;
+}
+
+nav .navbar .center{
+    text-align: center;
+}
+
+nav .navbar .row #cta a{
+    background-color: #4468E2;
+    color: white;
+    font-size: 0.8em;
+    border-radius: 5em;
+    width: 5%;
+    padding: 4px 9px;
+    margin-right: 8px;
+    margin-bottom: 50px;
+}
+
+nav .navbar .row #cta {
+    float: right;
+    margin-right: 10px;
+}
+
+#header .header-main{
+    position: relative;
+}
+
+#header .header-main .header-pic img{
+    width: 100%;
+    height: 38rem;
+}
+
+#header .header-main .header-text {
+    position: absolute;
+    color: white;
+    width:100%;
+    text-align: center;
+    top:130px;
+    z-index: 2;
+}
+
+#header .header-main .header-text h1{
+    font-weight: bolder;
+    font-size: 3.5rem;
+    padding-bottom: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#header .header-main .header-text p{
+    font-size: 1.2rem;
+    line-height: 20px;
+    font-weight:100;
+    display: block;
+}
+
+#header .header-main .pic-shadow1{
+    position: absolute;
+    width:100%;
+    height:99.5%;
+    border-radius: 1em;
+    background-color: rgba(112, 112, 112, 0.3);
+    z-index: 1;
+}
+
+.header-main .input-header li{
+    list-style-type: none;
+}
+
+
+.header-main .input-header{
+    position: absolute;
+    background-color: rgba( 255, 255 , 255, 0.8);
+    width: 80%;
+    min-height: auto;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%); /*Dont really understand this*/
+    z-index: 4;
+
+    border-radius: .5em;
+}
+
+.header-main .input-header .shifter{
+    display: flex;
+    justify-content: space-around;
+    align-content:space-around ;
+    gap: 4%;
+    padding: 20px;
+    flex-grow: 30%;
+
+}
+
+.header-main .input-header .shifter .top{
+    display: flex;
+    justify-content: space-around;
+    flex-basis: 70%;
+    gap: 4%;
+}
+
+.header-main .input-header .input {
+    font-size: .6em;
+}
+
+.header-main .input-header .shifter input:focus{
+    outline: none;
+}
+
+.header-main .input-header .shifter input{
+    border: none;
+    border-bottom: 1px solid black;
+    padding-top: 5px;
+    padding-left: 5px;
+    background-color: rgba(255, 255, 255, 0);
+}
+.header-main .input-header .input-width1 {
+    width: 100%;
+}
+
+.header-main .input-header .input-width2{
+    width: 100%;
+}
+
+.header-main .input-header .input-width3{
+    width: 100%;
+}
+
+.header-main .input-header .shifter label{
+    font-weight: bold;
+    padding-left: 6px;
+}
+
+
+
+.header-main .input-header .shifter #cta2{
+    padding: 13px 30px;
+    color: white;
+    background-color: #4468E2;
+    border: none;
+    border-radius: .5em;
+    box-shadow: 5px 5px 10px lightblue;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.header-main .input-header .shifter #cta2 a{
+    text-decoration: none;
+    color: white;
+}
+
+#section1{
+    margin-top: 10px;
+    margin-bottom: 100px;
+    margin-left: 20px;
+}
+
+#section1 .section1-main{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+}
+
+#section1 .section1-main .floater{
+    width: 240.25px;
+    /* float: left;
+    min-height: 188px; */
+    margin-right: 60px;
+    box-shadow: 5px 5px 60px 0px rgba(241, 250, 255, 100%),
+                5px 5px 10px 0px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+    padding: 20px;
+}
+
+/*This under is using flexbox which is very sweet but am just going to try and do it raw
+first before using flexbox*/
+/*#section1 .section1-main{
+    display: flex;
+}
+
+
+ #section1 .section1-main .floater{
+    width: 240.25px;
+    min-height: 188px;
+    margin-right: 60px;
+    box-shadow: 5px 5px 60px 0px rgba(241, 250, 255, 100%),
+                5px 5px 10px 0px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+} */
+
+#section1 .section1-main .floater h4, p{
+    padding-left: 10px;
+}
+
+#section1 .section1-main .floater .inner-pic{
+    background-color: #F0F4FC;
+    position: relative;
+    width: 100px;
+    height: 80px;
+    border-radius: 10%;
+}
+
+#section1 .section1-main .floater .inner-pic img{
+    position: absolute;
+    margin-left: 15px;
+    margin-top: 15px;
+    padding: 15px;
+    box-sizing:initial;
+    border-radius: 5%;
+    width: 100%;
+    width: 50%;
+    vertical-align: auto;
+    padding: 0;
+    margin: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#section1 .section1-main #push-up{
+    margin-top: 0px;
+}
+
+#section1 .section1-main .floater h4{
+    padding-top: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+#section1 .section1-main .floater p{
+    font-size: .7em;
+    word-break: keep-all;
+    font-weight: 10px;
+}
+
+#section2{
+    background-color: #f1faff;
+    height: 100%;
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+}
+
+/* This is for the top box */
+section .section2-main .section2-pics .flex1 .package-pic .got1{
+    position: relative;
+    z-index: 1;
+}
+
+#section2 .section2-pics .flex1 .package-pic .got1 .box-pic{
+    width: 20%;
+    height: auto;
+    position: absolute;
+    left: -9%;
+    top: -8%;
+    z-index: -1;
+    margin-left: 10px;
+}
+
+#section2 .section2-pics .flex1 .package-pic .box-pic{
+    width: 20%;
+    height: 50%;
+}
+/* This is for the bottom box */
+section .section2-main .section2-pics .flex2 .package-pic .got2{
+    position: relative;
+    z-index: 2;
+}
+
+#section2 .section2-pics .flex2 .package-pic .got2 .box-pic {
+    width: 20%;
+    height: auto;
+    position: absolute;
+    left: 88%;
+    bottom: -5%;
+    z-index: -1;
+    margin-left: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+#section2 .section2-pics .flex2 .package-pic .box-pic{
+    width: 20%;
+    height: 50%;
+}
+
+/* #section2 .section2-pics .flex2 .relative{
+    position: relative;
+}
+
+#section2 .section2-pics .flex2 .relative .dot{
+    position: absolute;
+    width: 60%;
+    height: auto;
+    left: 84%;
+    top: 54%;
+    z-index: -1;
+    margin-left: 10px;
+} */
+
+/* end */
+
+section .section2-main .section2-header .h4-text h4{
+    text-align: center;
+    padding-top: 30px;
+    margin-bottom:30px;
+}
+
+section .section2-main .section2-header .destination-package ul{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+section .section2-main .section2-header .destination-package ul li{
+    display: inline-block;
+    font-size: .8em;
+    margin-left: 25px;
+    padding-bottom: 5px;
+}
+
+section .section2-main .section2-header .destination-package ul #current{
+    border-bottom: 2px solid black;
+}
+
+section .section2-main{
+    height: 100%;
+}
+
+section .section2-main .section2-pics{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+section .section2-main .section2-pics .flex1, .flex2{
+    display: flex;
+    justify-content: center;
+}
+
+section .section2-main .section2-pics .flex1 p, .flex2 p{
+    padding: 0;
+    padding-top: 5px;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+}
+
+section .section2-main .section2-pics .flex1 h4, .flex2 h4{
+    font-size: 1.3em;
+    margin-bottom: 15px;
+}
+
+section .section2-main .section2-pics .flex1 .main-pic, .flex2 .main-pic{
+    width: 100%;
+    height: 70%;
+}
+
+section .section2-main .section2-pics .flex1 .dish-pic, .flex2 .dish-pic{
+    width: 90%;
+    height: auto;
+}
+
+section .section2-main .section2-pics .flex1 .package-pic, .flex2 .package-pic{
+    position: relative;
+    flex-basis: 30%;
+    height: 100%;
+    font-size: 10px;
+    color: #163235;
+    margin-right: 10px;
+    z-index: 1;
+}
+
+section .section2-main .section2-pics .flex1 .package-pic .main-pic:hover,.flex2 .package-pic .main-pic:hover{
+    opacity: .5;
+    transition: .9s;
+    cursor: pointer;
+}
+
+
+
+#section3{
+    margin-bottom: 100px;
+}
+
+#section3 .section3-header{
+    margin-bottom: 30px;
+}
+
+#section3 .section3-header{
+    text-align: center;
+}
+
+#section3 .blog-pics{
+    display: flex;
+}
+
+#section3 .blog-pics .right{
+    display: flex;
+    flex-direction: column;
+}
+
+#section3 .blog-pics .hill img{
+    width: 100%;
+    min-height: 100%;
+}
+
+#section3 .blog-pics .right img{
+    width: 100%;
+    min-height: 100%;
+}
+
+
+
+#section3 .blog-pics .hill .hill-text h4{
+    text-align: center;
+}
+
+/* This is for  the hill */
+#section3 .blog-pics .hill{
+    position: relative;
+}
+
+#section3 .blog-pics .hill .hill-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2vw;
+    z-index: 33;
+}
+
+#section3 .blog-pics .hill .hill-pic {
+    position: relative;
+}
+
+#section3 .blog-pics .hill .hill-pic .pic-shadow2{
+    position: absolute;
+    width: 97.5%;
+    height: 95.5%;
+    left: 1%;
+    top: 1%;
+    background-color: rgba(112, 112, 112, 0.3);
+    border-radius: 1em;
+    z-index: 6;
+}
+
+#section3 .blog-pics .hill .hill-pic .pic-shadow2:hover {
+    background-color: rgba(112, 112, 112, 0);
+    transition: .9s;
+    cursor: pointer;
+}
+
+#section3 .blog-pics .right .both-main .yes .both-s:hover{
+    background-color: rgba(112, 112, 112, 0);
+    transition: .9s;
+    cursor: pointer;
+}
+
+#section3 .blog-pics .right .both-main{
+    position: relative;
+}
+
+#section3 .blog-pics .right .both-main .both{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.5vw;
+    z-index: 555555;
+}
+
+#section3 .blog-pics .right .both-main .both h4{
+    text-align: center;
+}
+
+#section3 .blog-pics .right .both-main .yes{
+    position: relative;
+}
+
+#section3 .blog-pics .right .both-main .yes .both-s{
+    position: absolute;
+    width: 97%;
+    height: 90%;
+    background-color: rgba(112, 112, 112, 0.3);
+    top: 3%;
+    left: 1%;
+    border-radius: .5em;
+}
+
+#section4{
+    margin-bottom: 100px;
+}
+
+#section4 .section4-header{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#section4 .customers{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    gap: 50px;
+}
+
+#section4 .customers .down{
+    margin-bottom: 30px;
+    position: relative;
+}
+
+#section4 .customers .customer1-profile{
+    display: flex;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: fit-content;
+}
+
+#section4 .customers .customer1-profile .customer1-role{
+    margin-top: 13px;
+}
+
+#section4 .customers .customer1-profile .customer1-image img{
+    width: 90%;
+}
+
+#section4 .customers .customer2-profile{
+    display: flex;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: fit-content;
+}
+
+#section4 .customers .customer2-profile .customer2-role{
+    margin-top: 13px;
+}
+
+#section4 .customers .customer2-profile .customer2-image img{
+    width: 90%;
+}
+
+#section4 .customers p{
+    font-size: 1.5vh;
+    margin-bottom: 5px;
+}
+
+#section4 .customers .down .quote i{
+    font-size: 1.5em;
+    color: #D2DDF5;
+    position: absolute;
+    top: 0;
+    left: -30px;
+}
+
+#section4 .customers .shade{
+    box-shadow: 5px 5px 60px 0px rgba(241, 250, 255, 100%),
+                5px 5px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+#footer .footer-main .nav-footer ul li{
+    list-style-type: none;
+    display: inline;
+    margin-right: 15px;
+}
+
+#footer .footer-main .nav-footer ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+#footer .footer-main{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 50px;
+    margin-bottom: 50px;
+}
+
+#footer .footer-main .icons i{
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#footer .footer-main{
+    background-color: #E1E8F8;
+    padding: 25px 0;
+    border-radius: .5em;
+}
+
+/* This is for the header section */
+@media only screen and (max-width: 650px) {
+    #header .header-main .header-text h1{
+        font-size: 5vh;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    #header .header-main .header-text p{
+        font-size: 1.7vh;
+    }
+}
+
+@media only screen and (max-width: 524px) {
+    #header .header-main .header-text h1{
+        font-size: 4vh;
+    }
+}
+
+@media only screen and (max-width: 524px) {
+    #header .header-main .header-text p{
+        font-size: 1.7vh;
+    }
+}
+
+@media only screen and (max-width: 417px) {
+    #header .header-main .header-text h1{
+        font-size: 3vh;
+    }
+}
+
+@media only screen and (max-width: 417px) {
+    #header .header-main .header-text p{
+        font-size: 1.7vh;
+    }
+}
+
+@media only screen and (max-width: 397px) {
+    #header .header-main .header-text h1{
+        font-size: 7vw;
+    }
+}
+
+@media only screen and (max-width: 397px) {
+    #header .header-main .header-text p{
+        font-size: 3.5vw;
+    }
+}
+
+
+/* This is for the input section */
+@media only screen and (max-width: 1126px) {
+    .header-main .input-header .input{
+        float: none;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 980px){
+    .header-main .input-header .shifter{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .header-main .input-header .shifter #cta2{
+        padding: .7rem 9rem;
+        width: unset;
+        height: unset;
+    }
+}
+
+@media only screen and (max-width: 980px){
+    .header-main .input-header .shifter #button-shift{
+        align-self: center;
+    }
+}
+
+@media only screen and (max-width: 692px){
+    .header-main .input-header .shifter .top{
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .header-main .input-header{
+        width: 70%;
+    }
+
+}
+
+@media only screen and (max-width: 518px){
+    .header-main .input-header .shifter #cta2{
+        padding: .8rem 5rem;
+    }
+}
+
+@media only screen and (max-width: 320px){
+    .header-main .input-header .shifter #cta2{
+        padding: .8rem 2rem;
+    }
+}
+
+@media only screen and (max-width: 172px){
+    .header-main .input-header .shifter #cta2{
+        padding: .6rem .5rem;
+    }
+}
+
+/* This is for the hamburger menu */
+@media only screen and (max-width: 600px){
+    nav .navbar .row{
+        display: none;
+        
+    }
+
+    nav .navbar #nav-menu.active{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background-color: lightblue;
+    }
+
+    nav{
+        padding: 0;
+    }
+
+    nav .navbar .row{
+        width: 50%;
+    }
+
+    nav .navbar #nav-menu #cta a{
+        float:none;
+        margin: 0px;
+        padding: 100;
+    }
+
+    nav .navbar #nav-menu #cta{
+        width: 100%;
+    }
+
+    nav .navbar #nav-menu li{
+        margin: auto;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+
+    nav .navbar #nav-menu li:hover{
+        margin-bottom: 15px;
+        color: white;
+        cursor: pointer;
+    }
+
+    nav .navbar #menu{
+        display: flex;
+        margin-right: 10px;
+        
+    }
+}
+
+@media only screen and (max-width: 748px){
+    section .section2-main .section2-pics{
+        width: 75%;
+        margin: auto;
+    }
+
+
+    section .section2-main .section2-pics .flex1, .flex2{
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    section .section2-main .section2-pics .box-pic{
+        display: none;
+    }
+    
+    #section3 .blog-pics{
+        flex-direction: column
+    }
+
+    section .section2-main .section2-pics .flex1 .package-pic .main-pic:hover,.flex2 .package-pic .main-pic:hover{
+        opacity: 1;
+    }
+
+    #section3 .blog-pics h4{
+        font-size: 2em;
+        font-weight: 800;
+    }
+
+    #section3 .blog-pics{
+        gap: 20px;
+        width: 80%;
+        margin: auto;
+    }
+
+    #section3 .blog-pics .right{
+        gap: 20px;
+    }
+}
+
+@media only screen and (max-width: 622px){
+    #section4 .customers{
+        flex-direction: column;
+    }
+
+    #section4 .customers .shade{
+        width: 80%;
+        margin: auto;
+    }
+}
